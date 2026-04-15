@@ -1,0 +1,307 @@
+{
+ "actions": [],
+ "autoname": "field:bank_name",
+ "creation": "2026-04-14 00:59:09.349426",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "settings",
+  "has_print_format",
+  "primary_settings",
+  "bank_name",
+  "cheque_size",
+  "starting_position_from_top_edge",
+  "cheque_width",
+  "cheque_height",
+  "scanned_cheque",
+  "column_break_5",
+  "check_ref_dist_from_top_edge",
+  "check_ref_dist_from_left_edge",
+  "html_gcxz",
+  "table_1_distance_from_top_edge",
+  "html_cloe",
+  "table_2_distance_from_top_edge",
+  "date_and_payer_settings",
+  "date_settings_column",
+  "date_dist_from_top_edge",
+  "date_dist_from_left_edge",
+  "payer_settings",
+  "payer_name_from_top_edge",
+  "payer_name_from_left_edge",
+  "amount_in_words_and_figure_settings",
+  "amount_in_words_column",
+  "amt_in_words_from_top_edge",
+  "amt_in_words_from_left_edge",
+  "amt_in_word_width",
+  "amt_in_words_line_spacing",
+  "amount_in_figure",
+  "amt_in_figures_from_top_edge",
+  "amt_in_figures_from_left_edge",
+  "preview",
+  "cheque_print_preview"
+ ],
+ "fields": [
+  {
+   "fieldname": "settings",
+   "fieldtype": "HTML",
+   "options": "<div>\n<h3> All dimensions in centimeter only </h3>\n</div>"
+  },
+  {
+   "default": "0",
+   "fieldname": "has_print_format",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Has Print Format",
+   "no_copy": 1,
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "primary_settings",
+   "fieldtype": "Section Break",
+   "label": "Primary Settings"
+  },
+  {
+   "fieldname": "bank_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Bank Name",
+   "no_copy": 1,
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "default": "Regular",
+   "fieldname": "cheque_size",
+   "fieldtype": "Select",
+   "label": "Cheque Size",
+   "options": "\nRegular\nA4\nLetter"
+  },
+  {
+   "depends_on": "eval:doc.cheque_size==\"A4\" | doc.cheque_size == \"Letter\"",
+   "fieldname": "starting_position_from_top_edge",
+   "fieldtype": "Float",
+   "label": "Starting position from top edge",
+   "precision": "2"
+  },
+  {
+   "default": "21.50",
+   "fieldname": "cheque_width",
+   "fieldtype": "Float",
+   "label": "Cheque Width",
+   "precision": "2"
+  },
+  {
+   "default": "9.00",
+   "fieldname": "cheque_height",
+   "fieldtype": "Float",
+   "label": "Cheque Height",
+   "precision": "2"
+  },
+  {
+   "fieldname": "scanned_cheque",
+   "fieldtype": "Attach",
+   "label": "Scanned Cheque"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break",
+   "label": "Check Reference Settings"
+  },
+  {
+   "fieldname": "date_and_payer_settings",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "12.00",
+   "fieldname": "date_dist_from_top_edge",
+   "fieldtype": "Float",
+   "label": "Distance from top edge",
+   "precision": "2"
+  },
+  {
+   "default": "13.50",
+   "fieldname": "date_dist_from_left_edge",
+   "fieldtype": "Float",
+   "label": "Starting location from left edge",
+   "precision": "2"
+  },
+  {
+   "fieldname": "payer_settings",
+   "fieldtype": "Column Break",
+   "label": "Payer Settings"
+  },
+  {
+   "default": "14.00",
+   "fieldname": "payer_name_from_top_edge",
+   "fieldtype": "Float",
+   "label": "Distance from top edge",
+   "precision": "2"
+  },
+  {
+   "default": "3.00",
+   "fieldname": "payer_name_from_left_edge",
+   "fieldtype": "Float",
+   "label": "Starting location from left edge",
+   "precision": "2"
+  },
+  {
+   "fieldname": "amount_in_words_and_figure_settings",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "12.50",
+   "fieldname": "amt_in_words_from_top_edge",
+   "fieldtype": "Float",
+   "label": "Distance from top edge",
+   "precision": "2"
+  },
+  {
+   "default": "2.00",
+   "fieldname": "amt_in_words_from_left_edge",
+   "fieldtype": "Float",
+   "label": "Starting location from left edge",
+   "precision": "2"
+  },
+  {
+   "default": "11.00",
+   "fieldname": "amt_in_word_width",
+   "fieldtype": "Float",
+   "label": "Width of amount in word",
+   "precision": "2"
+  },
+  {
+   "default": "0.50",
+   "fieldname": "amt_in_words_line_spacing",
+   "fieldtype": "Float",
+   "label": "Line spacing for amount in words",
+   "precision": "2"
+  },
+  {
+   "fieldname": "amount_in_figure",
+   "fieldtype": "Column Break",
+   "label": "Amount In Figure"
+  },
+  {
+   "default": "12.00",
+   "fieldname": "amt_in_figures_from_top_edge",
+   "fieldtype": "Float",
+   "label": "Distance from top edge",
+   "precision": "2"
+  },
+  {
+   "default": "18.50",
+   "fieldname": "amt_in_figures_from_left_edge",
+   "fieldtype": "Float",
+   "label": "Starting location from left edge",
+   "precision": "2"
+  },
+  {
+   "fieldname": "preview",
+   "fieldtype": "Section Break",
+   "label": "Preview"
+  },
+  {
+   "fieldname": "cheque_print_preview",
+   "fieldtype": "HTML"
+  },
+  {
+   "default": "12.00",
+   "fieldname": "check_ref_dist_from_top_edge",
+   "fieldtype": "Float",
+   "label": "Distance from top edge",
+   "precision": "2"
+  },
+  {
+   "default": "16.00",
+   "fieldname": "check_ref_dist_from_left_edge",
+   "fieldtype": "Float",
+   "label": "Distance from left edge",
+   "precision": "2"
+  },
+  {
+   "fieldname": "date_settings_column",
+   "fieldtype": "Column Break",
+   "label": "Date Settings"
+  },
+  {
+   "fieldname": "amount_in_words_column",
+   "fieldtype": "Column Break",
+   "label": "Amount In Words"
+  },
+  {
+   "fieldname": "html_gcxz",
+   "fieldtype": "HTML",
+   "options": "<label class=\"control-label\" style=\"margin-bottom: 0px; font-weight:bold;\">Table 1</label>"
+  },
+  {
+   "default": "1.00",
+   "fieldname": "table_1_distance_from_top_edge",
+   "fieldtype": "Float",
+   "label": "Distance From Top Edge",
+   "precision": "2"
+  },
+  {
+   "fieldname": "html_cloe",
+   "fieldtype": "HTML",
+   "options": "<label class=\"control-label\" style=\"margin-bottom: 0px; font-weight:bold;\">Table 2</label>"
+  },
+  {
+   "default": "18.50",
+   "fieldname": "table_2_distance_from_top_edge",
+   "fieldtype": "Float",
+   "label": "Distance From Top Edge",
+   "precision": "2"
+  }
+ ],
+ "links": [],
+ "max_attachments": 1,
+ "modified": "2026-04-14 06:27:30.787380",
+ "modified_by": "Administrator",
+ "module": "US Check Printing",
+ "name": "US Check Print Template",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
