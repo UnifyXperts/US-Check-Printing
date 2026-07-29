@@ -1,0 +1,23 @@
+{
+ "app": "us_check_printing",
+ "bg_color": "blue",
+ "creation": "2026-07-29 03:11:31.360216",
+ "docstatus": 0,
+ "doctype": "Desktop Icon",
+ "hidden": 0,
+ "icon_image": "",
+ "icon_type": "App",
+ "idx": 9,
+ "label": "US Check Printing",
+ "link": "/desk/us-check-print-template",
+ "link_type": "External",
+ "logo_url": "/assets/us_check_printing/images/logo_us_check_printing.png",
+ "modified": "2026-07-29 03:22:01.629878",
+ "modified_by": "Administrator",
+ "name": "US Check Printing",
+ "owner": "Administrator",
+ "parent_icon": "Accounting",
+ "restrict_removal": 0,
+ "roles": [],
+ "standard": 1
+}

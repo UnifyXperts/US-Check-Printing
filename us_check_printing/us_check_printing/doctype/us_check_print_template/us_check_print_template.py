@@ -39,6 +39,12 @@ class USCheckPrintTemplate(Document):
 
 @frappe.whitelist()
 def create_or_update_cheque_print_format(template_name: str):
+	if not frappe.has_permission("US Check Print Template", "write", doc=template_name):
+		frappe.throw(
+			_("You do not have permission to create or update a Print Format for {0}").format(template_name),
+			frappe.PermissionError,
+		)
+
 	if not frappe.db.exists("Print Format", template_name):
 		cheque_print = frappe.new_doc("Print Format")
 		cheque_print.update(

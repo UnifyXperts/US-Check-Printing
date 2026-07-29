@@ -11,15 +11,15 @@ app_license = "mit"
 # required_apps = []
 
 # Each item in the list will be shown as an app in the apps page
-# add_to_apps_screen = [
-# 	{
-# 		"name": "us_check_printing",
-# 		"logo": "/assets/us_check_printing/logo.png",
-# 		"title": "US Check Printing",
-# 		"route": "/us_check_printing",
-# 		"has_permission": "us_check_printing.api.permission.has_app_permission"
-# 	}
-# ]
+add_to_apps_screen = [
+	{
+		"name": "us_check_printing",
+		"logo": "/assets/us_check_printing/images/logo_us_check_printing.png",
+		"title": "US Check Printing",
+		"route": "/app/us-check-print-template",
+		"has_permission": "us_check_printing.api.permission.has_app_permission"
+	}
+]
 
 # Includes in <head>
 # ------------------
